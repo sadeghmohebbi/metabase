@@ -3,13 +3,15 @@ import MetabaseSettings from "metabase/lib/settings";
 import type { TokenFeature } from "metabase-types/api";
 
 export function hasPremiumFeature(feature: TokenFeature) {
-  const hasFeature = MetabaseSettings.get("token-features")?.[feature];
-  if (hasFeature == null) {
-    console.warn("Unknown premium feature", feature);
-  }
-  return hasFeature;
+  // const hasFeature = MetabaseSettings.get("token-features")?.[feature];
+  // if (hasFeature == null) {
+  //   console.warn("Unknown premium feature", feature);
+  // }
+  // return hasFeature;
+  return true;
 }
 
 export function hasAnySsoPremiumFeature() {
-  return hasAnySsoFeature(MetabaseSettings.get("token-features"));
+  // return hasAnySsoFeature(MetabaseSettings.get("token-features"));
+  return true;
 }

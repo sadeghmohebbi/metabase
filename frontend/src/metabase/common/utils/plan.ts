@@ -30,9 +30,10 @@ export const getPlan = (features?: TokenFeatures | null): Plan => {
     }
   }
 
-  return "oss";
+  // return "oss";
+  return "pro-self-hosted";
 };
 
 const ssoFeatures = ["sso_google", "sso_jwt", "sso_ldap", "sso_saml"] as const;
-export const hasAnySsoFeature = (features?: TokenFeatures | null): boolean =>
-  features != null && ssoFeatures.some(ssoFeature => features[ssoFeature]);
+export const hasAnySsoFeature = (features?: TokenFeatures | null): boolean => true;
+  // features != null && ssoFeatures.some(ssoFeature => features[ssoFeature]);

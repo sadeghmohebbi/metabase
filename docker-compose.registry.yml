@@ -1,0 +1,12 @@
+x-common-variables: &common-variables
+  MB_EDITION: ee
+  VERSION: 1.0.0
+
+services:
+  metabase-ee:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args: *common-variables
+    environment: *common-variables
+    image: portus.taaghche.com/taaghche/metabase-ee:latest
