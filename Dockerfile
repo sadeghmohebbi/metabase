@@ -9,7 +9,9 @@ ARG VERSION=v1.0.0.0
 
 WORKDIR /home/node
 
-RUN apt-get update && apt-get upgrade -y && apt-get install openjdk-11-jdk curl git -y \
+RUN apt-get -o Acquire::Check-Valid-Until=false update \
+    && apt-get -o Acquire::Check-Valid-Until=false upgrade -y \
+    && apt-get -o Acquire::Check-Valid-Until=false install openjdk-11-jdk curl git -y \
     && curl -O https://download.clojure.org/install/linux-install-1.11.1.1262.sh \
     && chmod +x linux-install-1.11.1.1262.sh \
     && ./linux-install-1.11.1.1262.sh
