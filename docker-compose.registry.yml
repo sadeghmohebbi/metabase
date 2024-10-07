@@ -1,6 +1,6 @@
 x-common-variables: &common-variables
   MB_EDITION: ee
-  VERSION: 1.0.0
+  VERSION: v1.0.0.0
 
 services:
   metabase-ee:
